@@ -45,26 +45,56 @@
           </div>
 
           <div class="c-preview__icon">
-            <img src="./images/icon-share.svg" alt="" />
+            <button id="js-open-tooltip" class="o-share-btn">
+              <svg xmlns="http://www.w3.org/2000/svg" width="15" height="13">
+                <path
+                  id="svg-fill"
+                  fill="#6E8098"
+                  d="M15 6.495L8.766.014V3.88H7.441C3.33 3.88 0 7.039 0 10.936v2.049l.589-.612C2.59 10.294 5.422 9.11 8.39 9.11h.375v3.867L15 6.495z"
+                />
+              </svg>
+            </button>
+
+            <div id="js-tooltip" class="c-tooltip is-hidden">
+              <div class="c-tooltip__text">SHARE</div>
+
+              <div class="c-tooltip__icons">
+                <a href="https://facebook.com" target="_blank"
+                  ><img src="./images/icon-facebook.svg" alt=""
+                /></a>
+                <a href="https://twitter.com" target="_blank"
+                  ><img src="./images/icon-twitter.svg" alt=""
+                /></a>
+                <a href="https://pinterest.com" target="_blank"
+                  ><img src="./images/icon-pinterest.svg" alt=""
+                /></a>
+              </div>
+
+              <button
+                id="js-close-tooltip"
+                class="o-share-btn o-share-btn--dark c-tooltip__btn"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="13">
+                  <path
+                    id="svg-fill"
+                    fill="#FFF"
+                    d="M15 6.495L8.766.014V3.88H7.441C3.33 3.88 0 7.039 0 10.936v2.049l.589-.612C2.59 10.294 5.422 9.11 8.39 9.11h.375v3.867L15 6.495z"
+                  />
+                </svg>
+              </button>
+            </div>
           </div>
         </div>
       </div>
     </div>
-    <!-- Shift the overall look and feel by adding these wonderful 
-  touches to furniture in your home
 
-  Ever been in a room and felt like something was missing? Perhaps 
-  it felt slightly bare and uninviting. I’ve got some simple tips 
-  to help you make any room feel complete.
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">SuzuMantan &#x1F389;</a>.
+    </div>
 
-  Michelle Appleton
-  28 Jun 2020
-
-  Share
-   -->
-    <!-- <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div> -->
+    <script src="./src/scripts/main.js"></script>
   </body>
 </html>
