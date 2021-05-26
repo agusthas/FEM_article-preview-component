@@ -1,0 +1,184 @@
+@use 'sass:map';
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap');
+
+$clr-dark-grayish-blue: hsl(217, 19%, 35%);
+$clr-desaturated-dark-blue: hsl(214, 17%, 51%);
+$clr-grayish-blue: hsl(212, 23%, 69%);
+$clr-light-grayish-blue: hsl(210, 46%, 95%);
+$font-family: 'Manrope', sans-serif;
+$font-weight-body: 500;
+$font-weight-heading: 700;
+$font-size-body: 0.8125rem; /* 13px */
+$border-radius: 10px;
+$breakpoints: (
+  'small': 400px,
+  'medium': 800px,
+);
+
+@mixin text-heading() {
+  font-family: $font-family;
+  font-weight: $font-weight-heading;
+  letter-spacing: 0.01em;
+  line-height: 1.5;
+  color: $clr-dark-grayish-blue;
+}
+
+@mixin text-body() {
+  font-family: $font-family;
+  font-weight: $font-weight-body;
+  letter-spacing: 0.01em;
+  line-height: 1.5;
+  color: $clr-desaturated-dark-blue;
+}
+
+@mixin circle($radius) {
+  width: $radius;
+  height: $radius;
+  border-radius: 99999px;
+}
+
+@mixin bp-up($bp) {
+  @media (min-width: map.get($breakpoints, $bp)) {
+    @content;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: $clr-light-grayish-blue;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.l-body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 1.5rem; /* 24px */
+}
+
+.l-preview {
+  border-radius: $border-radius;
+  overflow: hidden;
+
+  &__header {
+  }
+
+  &__body {
+    padding: 1.25rem 2rem;
+
+    @include bp-up('medium') {
+      min-height: 100%;
+      padding: 2rem 2.5rem;
+    }
+  }
+}
+
+.c-preview {
+  background-color: #fff;
+  box-shadow: 0 20px 30px rgba(#000, 0.1);
+
+  @media (min-width: 400px) {
+    max-width: 400px;
+  }
+
+  @media (min-width: 800px) {
+    max-width: 732px;
+    display: flex;
+  }
+
+  &__header {
+    min-width: 100%;
+    height: 200px;
+    background-image: url('../../../images/drawers.jpg');
+    background-size: cover;
+    background-position: top center;
+
+    @media (min-width: 800px) {
+      min-width: 287px;
+      height: auto;
+      min-height: 100%;
+      background-position: center left;
+    }
+  }
+
+  &__title {
+    @include text-heading();
+
+    margin-top: 1rem;
+    font-size: 1rem;
+
+    @include bp-up('medium') {
+      margin: 0;
+      font-size: 1.25rem; /* 20px */
+      line-height: 1.4;
+    }
+  }
+
+  &__text {
+    @include text-body();
+
+    margin-top: 0.625rem;
+    font-size: $font-size-body;
+  }
+
+  &__footer {
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+  }
+
+  &__profile {
+    margin-left: 1rem;
+  }
+
+  &__name {
+    @include text-heading();
+
+    font-size: $font-size-body;
+  }
+
+  &__date {
+    @include text-body();
+
+    font-size: $font-size-body;
+  }
+
+  &__pp {
+    @include circle(40px);
+    background-image: url('../../../images/avatar-michelle.jpg');
+    background-size: cover;
+    background-position: center center;
+  }
+
+  &__icon {
+    @include circle(32px);
+
+    margin-left: auto;
+    background-color: $clr-light-grayish-blue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "name": "article-preview-component",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass:watch": "sass --watch ./src/styles/scss:./src/styles/css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.34.0"
+  }
+}
