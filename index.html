@@ -45,10 +45,10 @@
           </div>
 
           <div class="c-preview__icon">
-            <button id="js-open-tooltip" class="o-share-btn">
+            <button aria-label="open tooltip" id="js-open-tooltip" class="o-share-btn">
               <svg xmlns="http://www.w3.org/2000/svg" width="15" height="13">
                 <path
-                  id="svg-fill"
+                  class="svg-fill"
                   fill="#6E8098"
                   d="M15 6.495L8.766.014V3.88H7.441C3.33 3.88 0 7.039 0 10.936v2.049l.589-.612C2.59 10.294 5.422 9.11 8.39 9.11h.375v3.867L15 6.495z"
                 />
@@ -60,23 +60,24 @@
 
               <div class="c-tooltip__icons">
                 <a href="https://facebook.com" target="_blank"
-                  ><img src="./images/icon-facebook.svg" alt=""
+                  ><img src="./images/icon-facebook.svg" alt="facebook"
                 /></a>
                 <a href="https://twitter.com" target="_blank"
-                  ><img src="./images/icon-twitter.svg" alt=""
+                  ><img src="./images/icon-twitter.svg" alt="twitter"
                 /></a>
                 <a href="https://pinterest.com" target="_blank"
-                  ><img src="./images/icon-pinterest.svg" alt=""
+                  ><img src="./images/icon-pinterest.svg" alt="pinterest"
                 /></a>
               </div>
 
               <button
+                aria-label="close tooltip"
                 id="js-close-tooltip"
                 class="o-share-btn o-share-btn--dark c-tooltip__btn"
               >
                 <svg xmlns="http://www.w3.org/2000/svg" width="15" height="13">
                   <path
-                    id="svg-fill"
+                    class="svg-fill"
                     fill="#FFF"
                     d="M15 6.495L8.766.014V3.88H7.441C3.33 3.88 0 7.039 0 10.936v2.049l.589-.612C2.59 10.294 5.422 9.11 8.39 9.11h.375v3.867L15 6.495z"
                   />

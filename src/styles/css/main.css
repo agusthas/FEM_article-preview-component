@@ -169,7 +169,7 @@ button * {
 .o-share-btn.has-active {
   background-color: #6d7f97;
 }
-.o-share-btn.has-active #svg-fill {
+.o-share-btn.has-active .svg-fill {
   fill: #fff;
 }
 .o-share-btn--dark {

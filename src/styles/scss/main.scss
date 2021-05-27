@@ -197,7 +197,7 @@ button * {
   &.has-active {
     background-color: $clr-desaturated-dark-blue;
 
-    #svg-fill {
+    .svg-fill {
       fill: #fff;
     }
   }
