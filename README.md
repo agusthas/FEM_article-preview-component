@@ -30,7 +30,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [Github Repo](https://github.com/agusthas/article-preview-component/)
-- Live Site URL: [Github Pages](https://agusthas.github.io/article-preview-component/)
+- Live Site URL: [Github Pages](https://agusthas.github.io/FEM_article-preview-component/)
 
 ## My process
 
